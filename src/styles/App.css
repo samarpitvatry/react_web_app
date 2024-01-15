@@ -1,0 +1,399 @@
+
+body {
+  font-family: 'BTCurve', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #F5F5F5;
+  /*linear-gradient(45deg, #553a99, #9061c3); */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100vh;
+  overflow-x: hidden;
+
+}
+
+
+.BT-logo-icon {
+  width: 60px;  /* Width of the logo */
+  height: 60px;  /* Height of the logo */
+  position: absolute;
+  left: 60px;  /* Distance from the left edge of the header */
+  top: 50%;  /* Position the top edge of the logo at the center of the header */
+  transform: translateY(-50%);  /* Offset the logo by half its height upwards */
+  padding: 5px;  /* Padding inside the logo*/
+}
+
+/* Add or modify this for the header background color */
+.App-header {
+  background-color: #5514B4; /* #6200EE header color */
+  height: 75px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Adjust the space between icons */
+  margin-left: auto;
+  margin-right: 50px;/* Adjust the space of bell icon from right */
+}
+
+.header-icons svg {
+  width: 25px;  /* Adjust the size of icons */
+  height: 25px; /* Adjust the size of icons */
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px; /* This value can be adjusted */
+  }
+
+table, th, td {
+  border: 1px solid #553a99;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #553a99;
+  color: white;
+}
+
+
+.homepage h1 {
+  color: white;
+}
+
+/* Custom styles for striped table rows */
+.table-striped > tbody > tr:nth-child(odd) {
+  background-color: #f7f2ff; /* Lighter purple for odd rows */
+}
+
+.table-striped > tbody > tr:nth-child(even) {
+  background-color: #ede9f4; /* Slightly different shade of light purple for even rows */
+}
+
+.table-hover > tbody > tr:hover {
+  /* This targets the hover state of table rows if it has the .table-hover class */
+  background-color: #e7d9ff; /*rgba(113, 74, 199, 0.1);  Slightly darker for hover state */
+}
+
+.table thead th {
+  /* Custom styles for the table headers */
+  background-color: #5514B4; /* Purple to match your header, or any other color */
+  color: white;
+  border-bottom: 2px solid #413c69; /* Darker shade for the bottom border of the header */
+  font-size: 0.8rem; /* Adjust this value as needed */
+  font-weight: bold;
+  font-family: 'BTCurve', sans-serif;
+}
+
+.table tbody td {
+  /* Custom styles for table data cells */
+  border: 1px solid #553a99; /* Purple borders for cells, or use 'transparent' for no borders */
+  font-size: 0.8rem; /* Adjust this value as needed */
+  font-family: 'BTCurve', sans-serif;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  width: 100%;
+  /* Add any additional styling for the header here */
+}
+
+.content-area {
+  display: flex;
+  flex-grow: 1;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 120px;/* Pushing content(filter,table) to right */
+
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row; /* Align children in a row */
+  justify-content: start; /* Align children to the start of the container */
+  align-items: flex-start; /* Align children at the top */
+  gap: 30px 70px;
+  width: 70%;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  border-radius: 8px;
+  background-color: #f6f1fd;
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.filter-column {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  width: 30%; /* Each column takes up half of the filter-container width */
+  flex-basis: calc(50% - 65px);
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: row; /* Align label and input side by side */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space out label and input */
+  margin-bottom: 15px;
+}
+
+
+.filter-label {
+  display: inline-block; /* This ensures the label respects the width we set */
+  width: 135px; /* Adjust this width to suit your longest label */
+  margin-bottom: 5px;
+  color: black;
+  font-family: 'BTCurve', sans-serif;
+  font-size: 15px;
+  text-align: left; /* This will align the text to the right, making it closer to the input fields */
+  margin-right: 5px; /* You can adjust this value to increase/decrease the gap to the input */
+  }
+
+
+.filter-input {
+  margin-left: 5px;
+  box-sizing: border-box;
+  width: 220px; /* Adjust as needed */
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'BTCurve', sans-serif;
+  font-size: 15px; /* Adjust as needed */
+}
+
+.search-button:disabled {
+  background-color: #cccccc; /* Light gray background */
+  color: #666666; /* Darker gray text */
+  cursor: not-allowed; /* Cursor indicates the button is not clickable */
+  opacity: 0.7; /* Slightly transparent */
+}
+
+.search-button {
+  background-color: #5514B4; /* 9061c3 Purple color from your theme */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'BTCurve', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.search-button:hover {
+  background-color: #3A0CA3; /* 553a99 A darker purple on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-button:active {
+  background-color: #29087A; /* 5514B4 darker purple when active */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+.navigation-button {
+  background-color: #008CBA; /*6bc1c4 Blue background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'BTCurve', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.navigation-button:hover {
+  background-color: #007B9E; /* 57a5a8 Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navigation-button:active {
+  background-color: #006080; /* 498a8c Even darker blue when active */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-button:disabled {
+  background-color: #a9d0f5; /* a9d0f5 Lighter blue for disabled state */
+  color: #ffffff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* Changes related to detail icon */
+.icon-cell {
+  /* text-align: center;  Centers the content of the cell */
+  vertical-align: middle; /* Aligns content in the middle vertically */
+}
+
+.clickable-icon {
+  font-size: 1.0em; /* Adjust to change icon size */
+  cursor: pointer;
+}
+
+
+.account-details h1,
+.account-details h2
+{
+  font-family: 'BTCurve', sans-serif; /* Fallback to sans-serif */
+}
+
+.account-details h1 {
+  font-size: 1.7em; /* Adjust as needed */
+}
+
+.account-details h2 {
+  font-size: 1.2em; /* Adjust as needed */
+}
+
+.information-container {
+  display: flex;
+  justify-content: space-between; /* Space out sections evenly */
+  flex-wrap: wrap; /* Wrap onto new line on small screens */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .info-section {
+    flex-basis: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Add styles for Primary Contact Flex Fields */
+.primary-contact-flex-fields {
+  width: 50%; /* Set the width to 50% */
+  padding: 10px; /* Add padding as desired */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  display: inline-block; /* Display the table as an inline-block element */
+  vertical-align: top; /* Align the tables vertically at the top */
+}
+
+/* Add styles for Billing Flex Fields */
+.billing-flex-fields {
+  width: 50%; /* Set the width to 50% */
+  padding: 10px; /* Add padding as desired */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  display: inline-block; /* Display the table as an inline-block element */
+  vertical-align: top; /* Align the tables vertically at the top */
+}
+
+.info-section {
+  flex: 1;
+  min-width: 250px; /* Minimum width of each section */
+  margin: 10px; /* Spacing between sections */
+  font-family: 'BTCurve', sans-serif;
+  font-size: 15px;
+  margin-bottom: 20px; /* Add spacing between sections */
+  border: 1px solid #ccc; /* Add a border to separate sections */
+  padding: 20px; /* Add padding to the sections for better readability */
+  border-radius: 8px; /* Round the corners of the sections */
+  background-color: #ffffff; /* Set a white background color for sections */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for a card-like effect */
+}
+
+.info-section h2 {
+  font-size: 1.2rem; /* Increase the font size for section headings */
+  margin-bottom: 30px; /* Add spacing below section headings */
+  color: #333; /* Set a darker text color for headings */
+  margin-top: 0px;
+  }
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.p-datatable-striped:nth-child(odd) {
+  background-color: #f7f2ff;
+}
+
+.p-datatable-striped:nth-child(even) {
+  background-color: #ede9f4;
+}
+
+.p-datatable-hover:hover {
+  background-color: #e7d9ff; /*rgba(113, 74, 199, 0.1);  Slightly darker for hover state */
+}
+
+.p-datatable-custom {
+  font-size: 0.8rem; /* Adjust this based on the "Account" tab font size */
+  color: black; /* Adjust this based on the "Account" tab font color */
+  order: -1;
+}
+
+.p-datatable .p-paginator{
+  justify-content: flex-start;
+}
+
+
+.datatable-container {
+  margin-top: 30px;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 15px;  /* Add this line to create a gap on the right */
+}
+
+.clear-button {
+  background-color: white; /* White background */
+  color: #5514B4; /* Purple text to match theme */
+  padding: 10px 20px;
+  border: 1px solid #5514B4; /* Purple border */
+  border-radius: 5px;
+  font-family: 'BTCurve', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  text-align: center;
+  margin-left: 40px; /* Spacing between the search and clear buttons */
+}
+
+.clear-button:hover {
+  background-color: #f2f2f2; /* Slightly darker white on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.clear-button:active {
+  background-color: #e6e6e6; /* Even darker white when active */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

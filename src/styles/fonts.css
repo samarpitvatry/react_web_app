@@ -1,0 +1,42 @@
+
+@font-face {
+  font-family: 'BTCurve';
+  src: url('../assets/BT Curve Web font/WOFF/BTCurve_W_Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BTCurve';
+  src: url('../assets/BT Curve Web font/WOFF/BTCurve_W_Bd.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BTCurve';
+  src: url('../assets/BT Curve Web font/WOFF/BTCurve_W_It.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BTCurve';
+  src: url('../assets/BT Curve Web font/WOFF/BTCurve_W_BdIt.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BTCurve';
+  src: url('../assets/BT Curve Web font/WOFF/BTCurve_W_Headline.woff') format('woff');
+  font-weight: 800; /* Assuming Headline is extra bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BTCurve';
+  src: url('../assets/BT Curve Web font/WOFF/BTCurve_W_HeadlineIt.woff') format('woff');
+  font-weight: 800; /* Assuming HeadlineIt is extra bold italic */
+  font-style: italic;
+}

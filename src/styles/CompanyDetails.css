@@ -1,0 +1,173 @@
+
+.company-details-container {
+    font-family: 'BTCurve', sans-serif;
+    margin: 20px;
+    background-color: #F5F5F5;
+}
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.company-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.company-info-left, .company-info-right {
+    flex: 1; /* This will make both divs take up equal width */
+    /*background: #f2f2f2;*/
+    padding: 10px;
+    border-radius: 5px;
+    }
+
+.company-info-left {
+    margin-right: 10px; /* Add some space between the two columns */
+}
+
+.company-info-right {
+    margin-left: 10px; /* Add some space between the two columns */
+}
+
+/* Styles for paragraphs within the left and right info sections */
+.company-info-left p, .company-info-right p {
+    margin: 15px 0; /* Add space between rows */
+    color: #333;
+}
+
+.notes-section {
+    margin-bottom: 20px;
+    background: #ffffff ; /* #FAF9F4 #FFF */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add some shadow for depth */
+}
+
+.notes-header h2 {
+    margin: 0;
+    color: #5514B4; /* Make the header color stand out */
+}
+
+.chevron {
+    transition: transform 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.chevron.expanded {
+    color: #5514B4;
+    transform: scale(1.5) rotate(-180deg);
+}
+
+.notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;  /*#FAF9F4 */
+    padding: 10px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.notes-content p {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+   }
+
+
+.tab-nav {
+    margin-bottom: 20px;
+}
+
+.tab-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-nav ul li {
+    padding: 12px 25px;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+    transition: background-color 0.3s ease; /* Add a transition for smooth color change */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #dddddd;
+    margin-right: 15px; /* Create a gap between tabs */
+}
+
+tab-nav ul li:last-child {
+    margin-right: 0; /* Removes margin for the last tab */
+}
+
+.tab-nav ul li:hover {
+    border-top-color: #5514B4;
+    background: #f2f2f2;
+    transform: scale(1.1); /* Add scale transform on hover */
+}
+
+
+
+.tab-nav ul li.active {
+    color: #333; /*#5514B4;*/
+    border-top-color: #5514B4;
+    background: #e7f1ff;
+    font-weight: bold;
+    transform: scale(1.1); /* Make active tab slightly larger */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow to active tab */
+
+}
+
+
+
+/* Style for the content area of each tab */
+.tab-content {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+/* Hidden content for inactive tabs */
+.tab-content.hidden {
+    display: none;
+}
+
+/* Example active tab content */
+#accounts-content.active-tab,
+#contracts-content.active-tab,
+#devices-content.active-tab,
+#entitlements-content.active-tab,
+#people-content.active-tab,
+#services-content.active-tab,
+#sites-content.active-tab,
+#virtual-events-content.active-tab {
+    display: block; /* Show active tab content */
+}
+
+/* Default state for tab content areas */
+.tab-content {
+    display: none; /* Hide all tab content by default */
+}
+
+/* Display the active tab content */
+.active-tab {
+    display: block;
+}

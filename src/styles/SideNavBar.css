@@ -1,0 +1,80 @@
+/* SideNavBar.css */
+.side-nav-bar {
+    width: 200px;
+    flex: 0 0 200px;
+    min-height: 100vh;
+    background-color: #343a40; /*#393e42;*/
+    padding: 5px; /*Horizontal bar padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for a slight 3D effect */
+}
+
+.side-nav-bar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav-bar .nav-links li {
+    margin-bottom: 5px; /* Provides a clear separation between navigation items */
+}
+
+.side-nav-bar .nav-links li a {
+    color: #ffffff; /* White text for clear visibility against the dark background */
+    text-decoration: none;
+    font-family: 'BTCurve', sans-serif; /* Professional sans-serif font */
+    font-size: 1rem; /* Clear and legible font size */
+    padding: 10px 15px; /* Comfortable padding for interaction */
+    display: block; /* Ensures the entire area is clickable */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for interactive elements */
+}
+
+.side-nav-bar .nav-links li a:hover,
+.side-nav-bar .nav-links li a.active { /* Active state can be controlled by React */
+    background-color: #495057; /* A slightly lighter grey for the hover/active state */
+    color: #ffffff; /* Maintain white text for contrast */
+    border-left: 4px solid #7c4dff; /* Purple border to tie in with the header color */
+}
+
+nav-links a {
+    display: flex; /* Aligns icons and text nicely */
+    align-items: center; /* Centers them vertically */
+}
+
+.nav-links a svg {
+    margin-right: 15px; /* Adjust the space between the icon and text */
+    /* Adjust the size of the icons if needed */
+    width: 20px; /* icon size */
+    height: 20px; /* icon size */
+}
+
+.nav-links .active {
+    color: #6227b7; /* Or any other style to highlight the active link */
+    font-weight: bold;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .side-nav-bar {
+        width: 100%; /* Adapt to full width for smaller screens */
+        height: auto; /* Adjust the height automatically */
+        position: fixed; /* Fixed position to stay within the viewport */
+        top: 0;
+        z-index: 1000; /* Stay on top of other content */
+        box-shadow: none; /* Less shadow on smaller devices for a cleaner look */
+    }
+    .side-nav-bar .nav-links li a {
+        text-align: center; /* Center the text for mobile navigation */
+        padding: 10px; /* Adjust padding for a balanced appearance */
+    }
+}
+
+/* Sub-header Styles */
+.nav-header {
+    color: #ffffff; /* White color for visibility */
+    font-family: 'BTCurve', sans-serif; /* Maintain consistency with the existing font */
+    font-size: 1rem; /* Slightly smaller than the link text */
+    font-weight: bold; /* Bold to stand out as a header */
+    /*padding: 10px 15px;  Consistent padding with the links */
+    margin-top: 10px; /* Extra space above the header for separation */
+}
+
